@@ -64,7 +64,7 @@ You can view and download my latest resume [here](./assets/Fayaz_Resume.pdf).
 ## Contact
 
 - **GitHub:** [Fayaz-DS](https://github.com/Fayaz-DS)
-- **Email:** [YourEmail@example.com] *(Replace with your actual email)*
+- **Email:** [userc5630@gmail.com] *(Replace with your actual email)*
 - **LinkedIn:** [LinkedIn Profile](https://www.linkedin.com/in/your-linkedin) *(Replace with your actual LinkedIn URL)*
 
 ---
