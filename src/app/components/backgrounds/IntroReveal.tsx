@@ -51,7 +51,7 @@ export default function IntroReveal({ onComplete }: { onComplete?: () => void })
                 ease: "power3.inOut",
             }, "<")
             .to(allLetters, {
-                color: "#0D0D4A",
+                color: "#000000",
                 duration: 0.8,
                 ease: "power2.out",
                 onComplete: () => {
@@ -79,15 +79,6 @@ export default function IntroReveal({ onComplete }: { onComplete?: () => void })
                 width: '100%',
             }}
         >
-            <div style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                background: 'linear-gradient(to bottom, #AAAAB6 0%, #9A9AAE 12%, #8A8AA6 24%, #7A7A9E 36%, #6A6A96 48%, #5A5A8E 60%, #4A4A86 72%, #3A3A7E 84%, #2A2A76 96%, #1A1A6E 100%)',
-                zIndex: 1,
-            }} />
             <div 
                 className="overlay" 
                 style={{
@@ -96,7 +87,7 @@ export default function IntroReveal({ onComplete }: { onComplete?: () => void })
                     left: 0,
                     right: 0,
                     bottom: 0,
-                    backgroundColor: '#0D0D4A',
+                    backgroundColor: '#000000',
                     zIndex: 5,
                 }}
             />
@@ -122,13 +113,13 @@ export default function IntroReveal({ onComplete }: { onComplete?: () => void })
                     letterSpacing: '0.05em',
                     lineHeight: 0.9,
                     fontWeight: 600,
-                    fontFamily: '"Cinzel", serif',
+                    fontFamily: 'Cinzel, serif',
                 }}>
-                    <span className="top-letter letter" style={{ color: '#FAF9F6' }}>F</span>
+                    <span className="top-letter letter" style={{ color: '#F5F6F7' }}>F</span>
                     <span style={{ color: 'transparent', fontSize: '25vw' }}>A</span>
-                    <span className="top-letter letter" style={{ color: '#FAF9F6' }}>Y</span>
+                    <span className="top-letter letter" style={{ color: '#F5F6F7' }}>Y</span>
                     <span style={{ color: 'transparent', fontSize: '25vw' }}>A</span>
-                    <span className="top-letter letter" style={{ color: '#FAF9F6' }}>Z</span>
+                    <span className="top-letter letter" style={{ color: '#F5F6F7' }}>Z</span>
                 </div>
             </div>
             <div 
@@ -154,12 +145,12 @@ export default function IntroReveal({ onComplete }: { onComplete?: () => void })
                     letterSpacing: '0.05em',
                     lineHeight: 0.9,
                     fontWeight: 600,
-                    fontFamily: '"Cinzel", serif',
+                    fontFamily: 'Cinzel, serif',
                 }}>
                     <span style={{ color: 'transparent', fontSize: '25vw' }}>F</span>
-                    <span className="bottom-letter letter" style={{ color: '#FAF9F6' }}>A</span>
+                    <span className="bottom-letter letter" style={{ color: '#F5F6F7' }}>A</span>
                     <span style={{ color: 'transparent', fontSize: '25vw' }}>Y</span>
-                    <span className="bottom-letter letter" style={{ color: '#FAF9F6' }}>A</span>
+                    <span className="bottom-letter letter" style={{ color: '#F5F6F7' }}>A</span>
                     <span style={{ color: 'transparent', fontSize: '25vw' }}>Z</span>
                 </div>
             </div>
