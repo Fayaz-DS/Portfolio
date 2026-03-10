@@ -1,7 +1,7 @@
 'use client';
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import About from '../components/About';
+import About from '../components/sections/About';
 
 export default function AboutPage() {
     const router = useRouter();

@@ -1,4 +1,4 @@
-import '../.././lib/fly.css';
+import '../../../lib/styles/fly.css';
 
 export default function About() {
     return (
@@ -13,7 +13,7 @@ export default function About() {
           <div className="grid-item">var()</div>
           <div className="grid-item">clamp()</div>
           <div className="grid-item">view()</div>
-          <div className="grid-item special"><b>SYED FAYAZ MEHDI</b></div>
+          <div className="grid-item special"><b>scroll to explore</b></div>
           <div className="grid-item">@layer</div>
           <div className="grid-item">@swash</div>
           <div className="grid-item">subgrid</div>

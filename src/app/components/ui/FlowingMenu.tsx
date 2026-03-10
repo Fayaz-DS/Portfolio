@@ -1,6 +1,9 @@
+'use client'
+
 import React, { useRef, useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { gsap } from 'gsap';
-import '../../../lib/FlowingMenu.css';
+import '../../../lib/styles/flowing-menu.css';
 
 
 interface MenuItemData {
@@ -68,6 +71,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
   borderColor,
   isFirst
 }) => {
+  const router = useRouter();
   const itemRef = useRef<HTMLDivElement>(null);
   const marqueeRef = useRef<HTMLDivElement>(null);
   const marqueeInnerRef = useRef<HTMLDivElement>(null);
@@ -165,9 +169,16 @@ const MenuItem: React.FC<MenuItemProps> = ({
       <a
         className="menu__item-link"
         href={link}
+        onClick={(e) => {
+          if (link.startsWith('/')) {
+            e.preventDefault();
+            router.push(link);
+          }
+        }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         style={{ color: textColor }}
+        {...(!link.startsWith('/') && { target: '_blank', rel: 'noopener noreferrer' })}
       >
         {text}
       </a>

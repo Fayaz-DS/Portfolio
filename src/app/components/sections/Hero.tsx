@@ -1,10 +1,10 @@
-import { GravityStarsBackground } from "./backgrounds/gravity-stars";
+import Image from "next/image";
+import dynamic from "next/dynamic";
 
-export const GravityStarsBackgroundDemo = () => {
-  return (
-    <GravityStarsBackground className="absolute inset-0 flex items-center justify-center rounded-xl" />
-  );
-};
+const FloatingShapeBackground = dynamic(
+  () => import("../ui/FloatingShape").then(m => ({ default: m.FloatingShapeBackground })),
+  { ssr: false }
+);
 
 export default function Hero() {
   return (
@@ -50,13 +50,13 @@ export default function Hero() {
         <p>© 2026 fayaz.engineering</p>
       </div>
       <div>
-        <a href="https://github.com/Fayaz-DS/Syed-Fayaz-Mehdi.git" rel="noopener noreferrer" target="_blank" className="btn-flip" data-back="Documentation" data-front="Documentation"></a>
-        <img src="git.png" alt="GitHub Logo" className="git-logo" />
-        <a href="#" rel="noopener noreferrer" target="_blank" className="btn-flip0" data-back="ring up" data-front="RING up"></a>
-        <img src="arrow.png" alt="Arrow Logo" className="arrow-logo" />
+        <a href="https://github.com/Fayaz-DS/Syed-Fayaz-Mehdi.git" rel="noopener noreferrer" target="_blank" className="btn-flip" data-back="Source Code" data-front="Documentation"></a>
+        <Image src="/git.png" alt="GitHub Logo" className="git-logo" width={54} height={54} />
+        <a href="/connect" className="btn-flip0" data-back="reach out" data-front="RING up"></a>
+        <Image src="/arrow.png" alt="Contact" className="arrow-logo" width={54} height={54} />
       </div>
       <div className="begins">
-        <p>Plain books conceal depth.</p>
+        <p>"Plain books conceal depth."</p>
       </div>
       <div className="scroll">
         <p>SCROLL TO</p>
@@ -64,7 +64,7 @@ export default function Hero() {
       </div>
       <div className="line"></div>
       <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-        <GravityStarsBackground className="w-full h-full" style={{ color:'#000000', width: '100%', height: '100%' }} />
+        <FloatingShapeBackground />
       </div>
     </section>
   );

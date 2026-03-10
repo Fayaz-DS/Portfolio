@@ -28,6 +28,7 @@
   place-items: center;
 
   overflow: clip;
+  color: #ffffff;
 
   > .grid-item {
     transform-style: preserve-3d;
