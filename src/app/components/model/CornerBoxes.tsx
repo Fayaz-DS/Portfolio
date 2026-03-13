@@ -134,10 +134,10 @@ const RESUME = {
 }
 
 const BOX_CONFIGS = [
-  { id: 1, serial: "I",   label: "ABOUT",    symbol: "◆",   pos: "top-10 left-10",     origin: "top left"     },
-  { id: 2, serial: "II",  label: "MASTERY",  symbol: "✦",   pos: "top--245 right--1870",    origin: "top right"    },
-  { id: 3, serial: "III", label: "SOCIAL'S",  symbol: "✉",   pos: "bottom--290 left-10",  origin: "bottom left"  },
-  { id: 4, serial: "IV",  label: "TESTAMENT", symbol: "⚜",   pos: "bottom--30 right--1868", origin: "bottom right" },
+  { id: 1, serial: "I",   label: "ABOUT",     symbol: "◆", pos: { top: 16,    left: 16   }, origin: "top left"     },
+  { id: 2, serial: "II",  label: "MASTERY",   symbol: "✦", pos: { top: 16,    right: 16  }, origin: "top right"    },
+  { id: 3, serial: "III", label: "SOCIAL'S",  symbol: "✉", pos: { bottom: 16, left: 16   }, origin: "bottom left"  },
+  { id: 4, serial: "IV",  label: "TESTAMENT", symbol: "⚜", pos: { bottom: 16, right: 16  }, origin: "bottom right" },
 ]
 
 function Brackets({ animated = false }: { animated?: boolean }) {
@@ -842,10 +842,10 @@ function ResumeContent() {
 }
 
 const MOBILE_POSITIONS: Record<number, React.CSSProperties> = {
-  1: { top: 20,    left:  0 },
-  2: { top: -92,    right: -290 },
-  3: { bottom: -340, left:  -0 },
-  4: { bottom: -228, right: -290 },
+  1: { top: 12,    left: 12 },
+  2: { top: 12,    right: 12 },
+  3: { bottom: 12, left: 12 },
+  4: { bottom: 12, right: 12 },
 }
 
 export default function CornerBoxes({ hovered, setHovered, active, setActive }: any) {
@@ -901,15 +901,7 @@ export default function CornerBoxes({ hovered, setHovered, active, setActive }: 
         if (active === id) return null
         const isHov = hovered === id
 
-        const posStyle: any = {}
-        pos.split(" ").forEach((token) => {
-          if (token.startsWith("top-")) posStyle.top = Number(token.slice(4)) || 0
-          else if (token.startsWith("right-")) posStyle.right = Number(token.slice(6)) || 0
-          else if (token.startsWith("bottom-")) posStyle.bottom = Number(token.slice(7)) || 0
-          else if (token.startsWith("left-")) posStyle.left = Number(token.slice(5)) || 0
-        })
-
-        const finalPosStyle = isMobile ? MOBILE_POSITIONS[id] : posStyle
+        const finalPosStyle = isMobile ? MOBILE_POSITIONS[id] : pos
 
         return (
           <motion.div
