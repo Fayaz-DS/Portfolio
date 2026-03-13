@@ -135,9 +135,9 @@ const RESUME = {
 
 const BOX_CONFIGS = [
   { id: 1, serial: "I",   label: "ABOUT",    symbol: "◆",   pos: "top-10 left-10",     origin: "top left"     },
-  { id: 2, serial: "II",  label: "MASTERY",  symbol: "✦",   pos: "top--245 right--1655",    origin: "top right"    },
-  { id: 3, serial: "III", label: "SOCIAL'S",  symbol: "✉",   pos: "bottom--190 left-10",  origin: "bottom left"  },
-  { id: 4, serial: "IV",  label: "TESTAMENT", symbol: "⚜",   pos: "bottom-65 right--1658", origin: "bottom right" },
+  { id: 2, serial: "II",  label: "MASTERY",  symbol: "✦",   pos: "top--245 right--1870",    origin: "top right"    },
+  { id: 3, serial: "III", label: "SOCIAL'S",  symbol: "✉",   pos: "bottom--290 left-10",  origin: "bottom left"  },
+  { id: 4, serial: "IV",  label: "TESTAMENT", symbol: "⚜",   pos: "bottom--30 right--1868", origin: "bottom right" },
 ]
 
 function Brackets({ animated = false }: { animated?: boolean }) {
